@@ -13,7 +13,7 @@ class Crypt:
 
     def __init__(self, salt:str):
         if len(salt) < 32 and len(salt) > 0:
-            salt = fill_0(salt, 16)
+            salt = fill_0(salt, 32)
         else:
             raise ValueError('Password must be less than 32 characters long')
         
